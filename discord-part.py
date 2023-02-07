@@ -38,7 +38,7 @@ async def channel_updater():
     solPrice = main.get_sol()
 
     channel = await client.fetch_channel(1072609878163599440)
-    await channel.edit(name=f"SolanaPrice: ${solPrice}")
+    await channel.edit(name=f"Solana Price: ${solPrice}")
 
     print("Channels name updated")
 
