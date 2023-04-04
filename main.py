@@ -53,5 +53,12 @@ def get_price():
     return original.json()["project_stats"][0]["floor_price"], radiated1.json()["project_stats"][0]["floor_price"], radiated2.json()["project_stats"][0]["floor_price"], pharos.json()["project_stats"][0]["floor_price"]
 
 def get_sol():
-    print(round(float(client.ticker_price("SOLUSDT")["price"]), 2))
-    return round(float(client.ticker_price("SOLUSDT")["price"]), 2)
+    link = "https://api.coingecko.com/api/v3/simple/price?ids=solana&vs_currencies=usd"
+
+    solana = requests.request("GET", link).json()["solana"]["usd"]
+
+    link = "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"
+
+    bitcoin = requests.request("GET", link).json()["bitcoin"]["usd"]
+
+    return bitcoin, solana

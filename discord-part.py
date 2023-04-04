@@ -22,7 +22,7 @@ async def channel_updater():
     channel = await client.fetch_channel(1072548291348279417)
     time.sleep(10)
 
-    await channel.edit(name=f"DegenBoyz: ◎{original}")
+    await channel.edit(name=f"test: ◎{original}")
     time.sleep(10)
 
     channel = await client.fetch_channel(1072601477673132172)
