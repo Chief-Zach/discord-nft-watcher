@@ -37,10 +37,10 @@ async def channel_updater():
     await channel.edit(name=f"DegenPharaohz: ◎{pharos}")
     time.sleep(10)
 
-    solPrice = main.get_sol()
+    cryptoPrice = main.get_sol()
 
     channel = await client.fetch_channel(1072609878163599440)
-    await channel.edit(name=f"Solana Price: ${solPrice}")
+    await channel.edit(name=f"Solana Price: ${cryptoPrice[0]}")
 
     print("Channels name updated")
 
